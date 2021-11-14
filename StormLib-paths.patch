@@ -1,0 +1,17 @@
+--- StormLib-9.23/CMakeLists.txt.orig	2020-11-21 04:27:09.000000000 +0100
++++ StormLib-9.23/CMakeLists.txt	2021-11-14 20:48:28.601082259 +0100
+@@ -330,13 +330,7 @@
+ endif()
+ 
+ if (NOT STORM_SKIP_INSTALL)
+-    install(TARGETS ${LIBRARY_NAME} 
+-	    RUNTIME DESTINATION bin 
+-	    LIBRARY DESTINATION lib 
+-	    ARCHIVE DESTINATION lib 
+-	    FRAMEWORK DESTINATION /Library/Frameworks
+-	    PUBLIC_HEADER DESTINATION include
+-	    INCLUDES DESTINATION include)
++    install(TARGETS ${LIBRARY_NAME})
+ 
+         #CPack configurtion
+         SET(CPACK_GENERATOR "DEB" "RPM")
